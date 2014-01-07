@@ -7,17 +7,17 @@ defmodule WeberHttpResponseTest do
   end
 
   test "GET /bins" do
-    {:ok, status, _, client} = :hackney.request(:get, 'http://localhost:8080/elixir/trash/bins', [], <<>>, [])
+    {:ok, status, _, client} = :hackney.request(:get, 'http://localhost:8080/trash/bins', [], <<>>, [])
     assert(status == 200)
   end
 
   test "GET /bins/123" do
-    {:ok, status, _, client} = :hackney.request(:get, 'http://localhost:8080/elixir/trash/bins/123', [], <<>>, [])
+    {:ok, status, _, client} = :hackney.request(:get, 'http://localhost:8080/trash/bins/123', [], <<>>, [])
     assert(status == 200)
   end
 
   test "GET /bins/new" do
-    {:ok, status, _, client} = :hackney.request(:get, 'http://localhost:8080/elixir/trash/bins/new', [], <<>>, [])
+    {:ok, status, _, client} = :hackney.request(:get, 'http://localhost:8080/trash/bins/new', [], <<>>, [])
     assert(status == 200)
   end
 
